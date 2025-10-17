@@ -1,2 +1,2 @@
-# Development-
+# Development
 Full Stack development notes
