@@ -1,7 +1,7 @@
 # Development
 # Full Stack development notes
-# 1 : html
-# 2 : css
-# 3 : js
-# 4 : react
-# 5 : redux 
+# 1 : HTML
+# 2 : CSS
+# 3 : Javascript
+# 4 : React
+# 5 : Redux 
