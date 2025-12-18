@@ -5,6 +5,6 @@
 # 3 : Javascript
 # 4 : React.js
 # 5 : Redux 
-# 6 : Spring Boot 
+# 6 : Spring Boot + Devops
 # 7 : Version Control
 # 8 : npm
