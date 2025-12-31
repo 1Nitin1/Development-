@@ -22,7 +22,7 @@ It is about Lists, Table and forms.
 It also talks about iframe tag.
 Lists - ol(type attribute), li, ul
 Table - table(border attribute), caption, tr, th, td(colspan attribute).
-Forms - 
+Forms - text, password, label, date, datetime-local, time, color, file, select(options), datelist(options), range, number, month, button, submit,textarea, radio, checkbox.
 # 2 : CSS
 # 3 : Javascript
 # 4 : React.js

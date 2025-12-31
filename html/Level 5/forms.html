@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--forms-->
+    <form action="/submit.php" method="post">
+        <!--text input-->
+        <!--label tag-->
+        <label for="username">Username :</label>
+        <input type="text" id="username" name="username" value="John" placeholder="username"><br><br>
+        <!--password input-->
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" value="mypassword" placeholder="password"><br><br>
+        <!--number input-->
+        Age : <input type="number" id="age" name="age" value="25" min="1" max="100"><br><br>
+        <!--button input-->
+        <input type="button" name="idk" value="click if gay"><br><br>
+        <!--radio and checkbox-->
+        Gender : <br>
+        male : <input type="radio" id="male" name="gender" value="male">  
+        Female : <input type="radio" id="female" name="gender" value="female"><br><br>
+        
+        Hobbies : <br>
+        Reading : <input type="checkbox" id="reading" name="hobby" value="reading">
+        Traveling : <input type="checkbox" id="traveling" name="hobby" value="traveling">
+        Gaming : <input type="checkbox" id="gaming" name="hobby" value="gaming"><br><br>
+
+        <!--datetime-local-->
+        Appointment : <input type="datetime-local" id="appointment" name="appointment" value="2024-06-01T10:30"><br><br>
+
+        <!--month-->
+        Select Month : <input type="month" id="month" name="month" value="2024-06"><br><br>
+
+        <!--year-->
+        Select Year : <input type="number" id="year" name="year" value="2024" min="1900" max="2100"><br><br>
+
+        <!--datelist-->
+        Select a date : <input type="date" id="date" name="date" list="dateList">
+        <datalist id="dateList">
+            <option value="2024-06-01">
+            <option value="2024-07-01">
+            <option value="2024-08-01">
+        </datalist><br><br>
+
+        <!--select dropdown-->
+        Select Country :
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+            <option value="australia">Australia</option>
+        </select><br><br>
+
+        <!--range slider-->
+        Volume : <input type="range" id="volume" name="volume" min="0" max="100" value="50"><br><br>
+        <!--color picker-->
+        Select Color : <input type="color" id="color" name="color" value="#ff0000"><br><br>
+        <!--textarea for comments-->
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea><br><br>
+        <!--file upload-->
+        Upload File : <input type="file" id="fileUpload" name="fileUpload"><br><br>
+        <!--submit button-->
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>
