@@ -22,9 +22,13 @@ It is about Lists, Table and forms.
 It also talks about iframe tag.
 Lists - ol(type attribute), li, ul
 Table - table(border attribute), caption, tr, th, td(colspan attribute).
-Forms - text, password, label, date, datetime-local, time, color, file, select(options), datelist(options), range, number, month, button, submit,textarea, radio, checkbox.
+Forms - text, password, label, date, datetime-local, time, color, file, select(options), datalist(options), range, number, month, button, submit,textarea, radio, checkbox.
 iframe - iframe tag used with src and specifies height and width too.
 # 2 : CSS
+Level 1:
+Basic syntax, color property, three ways to include styles(inline, internal, external), html DOM, broser tools, selectors(element, universal, id, class, group, descendant).
+
+
 # 3 : Javascript
 # 4 : React.js
 # 5 : Redux 
