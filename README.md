@@ -28,7 +28,6 @@ iframe - iframe tag used with src and specifies height and width too.
 Level 1:
 Basic syntax, color property, three ways to include styles(inline, internal, external), html DOM, broser tools, selectors(element, universal, id, class, group, descendant).
 
-
 # 3 : Javascript
 # 4 : React.js
 # 5 : Redux 
