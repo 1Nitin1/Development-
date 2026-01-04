@@ -1,7 +1,7 @@
 # Development
 # Full Stack development notes
 # 1 : HTML
-1) Level 1:
+## 1. Level 1:
 
 1. It contains basic intro and how to comment.
 
