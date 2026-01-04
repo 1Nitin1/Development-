@@ -5,7 +5,7 @@
 
 1. It contains basic intro and how to comment.
 
-2) Level 2:
+## 2. Level 2:
 
 1. It contains all the basic tags(block and inline).
 
@@ -13,11 +13,11 @@
 
 3. These are - heading, paragraph, div, span, image, video, bold, italic, strikethrough, br, hr, underline, preserve, sub, sup, anchor, big, small.
 
-3) Level 3:
+## 3. Level 3:
 
 1. It mainly talks about view page source and inspecting a website.
 
-4) Level 4:
+## 4. Level 4:
 
 1. It is about semantic and non-semantic tags.
 
@@ -25,7 +25,7 @@
 
 3. Non-semantic - div, span, italic, etc.
 
-5) Level 5:
+## 5. Level 5:
 
 1. It is about Lists, Table and forms.
 
@@ -40,11 +40,11 @@
 6. iframe - iframe tag used with src and specifies height and width too.
 
 # 2 : CSS
-1) Level 1:
+## 1. Level 1:
 
 1. Basic syntax, color property, three ways to include styles(inline, internal, external), html DOM, broser tools, selectors(element, universal, id, class, group, descendant).
 
-2) Level 2:
+## 2. Level 2:
 
 1. Background properties : color, image, repeat, size, attachment, position and shorthand(color,image,repeat,attachment,position), visibility property.
 
