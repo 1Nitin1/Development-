@@ -66,7 +66,7 @@
 
 6. font-family(fallback using generic font like sans-serif or serif), using google font family and and integration.
 
-7. font icon(using <!--<i class="fa-solid fa-poo">-->), using fontawesome integration.
+7. font icon(using <i class="fa-solid fa-poo">), using fontawesome integration.
 
 ## 4. Level 4:
 
