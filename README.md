@@ -52,6 +52,39 @@
 
 3. dimensions - height and width properties.
 
+## 3. Level 3:
+
+1. text-align(left,right,center,justify,none)
+
+2. text-decoration(underline, overline, line-through,none), text-decoration-style(dashed,dotted,wavy,none), text-decoration-color.
+
+3. line-height(vertical spacng between lines).
+
+4. text-transform(uppercase, lowercase, capitalize).
+
+5. font properties: size, weight(100-900), style(italic, bold, oblique, normal).
+
+6. font-family(fallback using generic font like sans-serif or serif), using google font family and and integration.
+
+7. font icon(using <i class="">), using fontawesome integration.
+
+## 4. Level 4:
+
+1. padding: can do using shorthand or specify direction, it takes background color.
+
+2. border: width, style, color or use shorthand, radius for curving.
+
+3. margin: can do using shorthand or specify direction.
+
+4. box-sizing: border-box, content-box.
+
+## 5. Level 5:
+
+1. display: inline, block, inline-block, none(gayab)
+
+2. relative units: px(absolute), em(font size of parent), rem(font size of root), vh/vw(viewport/window), %(width of parent)
+
+3. positions: static, absolute, relative, fixed, sticky, z-index.
 
 # 3 : Javascript
 # 4 : React.js
