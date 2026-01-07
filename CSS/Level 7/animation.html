@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .box{
+            width:20vw;
+            height:10vh;
+            margin: 2%;
+            border:2px solid black;
+            border-radius: 10px;
+            position:absolute;
+            background-color: lightgray;
+            animation: hehe 4s ease-in-out 1s 4 alternate;
+            
+
+        }
+        @keyframes hehe {
+            0%{
+                left:0px; top:0px;
+                background-color: lightgray;
+            }
+            50%{
+                left:150px; top: 100px;
+                background-color: lightgreen;
+            }
+            100%{
+                left:300px; top: 0px;
+                background-color: lightcoral;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Box 1</div>
+</body>
+</html>

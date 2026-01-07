@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        #button{
+            width:120px;
+            height:40px;
+            border:2px solid black;
+            margin:20px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 10px;
+            border: 2.5px solid black;
+            /*property, duration, timing function, delay*/
+            transition: all 0.3s ease-in-out 1s;
+        }
+        /* #button:hover{
+            background-color: lightgray;
+            cursor:grab;
+            border: 3px solid red;
+            height:45px;
+            width:135px;
+            line-height: 40px;
+            text-decoration: underline;
+        } */
+        #button:active{
+            background-color: gray;
+            cursor:grab;
+            border: 3px solid green;
+            height:50px;
+            width:150px;
+            line-height: 45px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="button">Click Me</div>
+</body>
+</html>
