@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        #button{
+            width:100px;
+            height:40px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: lightgray;
+            position:absolute;
+            top:50vh;
+            left:50vw;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+        #bar{
+            width:400px;
+            height:50px;
+            border:4px solid black;
+            border-radius: 25px;
+            position:absolute;
+            top:50vh;
+            left:50vw;
+            transform: translate(-50%, -50%);
+            opacity:0;
+            visibility: hidden;
+            transition:opacity 0.5s ease-in;
+            overflow: hidden;
+        }
+        #button:focus {
+            background-color: rgb(180, 125, 125);
+            opacity:0;
+            transition:opacity 0.5s ease-out;
+        }
+        #button:focus + #bar{
+            opacity:1;
+            visibility: visible;
+            transition: opacity 1s ease-in 0.5s;
+        }
+        #fill{
+            width:0%;
+            height:100%;
+            background-color: lightgreen;
+        }
+        #button:focus + #bar #fill{
+            animation: fillAnim 5s ease-in-out 1s forwards;
+        }
+        @keyframes fillAnim {
+            0%{
+                width:0%;
+                background-color: red;
+            }
+        
+            80%{
+                width:80%;
+                background-color: yellow;
+            }
+            100%{
+                width:100%;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="button" value="Load">
+    <div id="bar">
+        <div id="fill">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        
+        #About {
+            width:200px;
+            height:200px; 
+            background-color:lightblue;
+            border: 2px solid black;
+            border-radius: 50%;
+            text-align:center;
+        }
+        #element1, #element2, #element3 {
+            width:150px;
+            height:150px; 
+            background-color:lightgreen;
+            border: 2px solid black;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+            text-align:center;
+        }
+        #element1{
+            position:fixed;
+            top:20px;
+            right:20px;
+        }
+        #element2{
+            position:relative;
+            top:40px;
+            left:200px;
+            z-index:3;
+        }
+        #element3{
+            position:absolute;
+            left:180px;
+            z-index:2;
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="Home">
+        <h3>Header Content</h3>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <div id="About">
+            <h4>Main Content</h4>
+            <p>This is where the main content of the page goes.</p>
+        </div>
+        <div id="element1">Element 1</div>
+        <div id="element2">Element 2</div>
+        <div id="element3">Element 3</div>
+    </main>
+    <footer id="Contact">
+        <p>Footer Content</p>
+        <address>
+            Contact us at: <a href="mailto:nitinkumarbaranawal@gmail.com">Email</a>
+        </address>
+    </footer>
+</body>
+</html>
