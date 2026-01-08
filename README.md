@@ -86,6 +86,29 @@
 
 3. positions: static, absolute, relative, fixed, sticky, z-index.
 
+## 6. Level 6:
+
+1. float:(left, right,none).
+
+2. flexbox:display, flex-wrap, flex-direction(row,column,row-reverse, columan-reverse), justify-content(flex-start, flex-end, center, space-between, space-around, space-evenly), aling-items, align-content, align-self, flex-shrink, flex-grow, order.
+
+3. grid:display, grid-template-columns, grid-template-rows, grid-column, grid-row.
+
+4. media queries: styling for specific conditions(@media screen and (){}).
+
+## 7. Level 7:
+
+1. Pseudo-classes: used after selector as :pseudo-class(eg-hover, active, focus, none), cursor.
+
+2. Transform: used as transition : {eg- rotate(), scale(), translate(), skew()} in all three axis.
+
+3. Transitions: properties(properties to transform), duration, timing-function(ease, ease-in-out,etc), delay. can be declared using shorthand.
+
+4. Animation: using @keyframes animation-name{
+    from{}
+    to{}
+}, animation is declared either using short hand or all props-(name, duration, timing-function, delay, iteration-count, direction).
+
 # 3 : Javascript
 # 4 : React.js
 # 5 : Redux 
