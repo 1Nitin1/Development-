@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #calculator{
+            height:500px;
+            width:300px;
+            border:2px solid black;
+            position:absolute;
+            left:50%;
+            transform: translate(-50%,-50%);
+            top:50%;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-evenly;
+            
+        }
+        .button{
+            height:57px;
+            width:57px;
+            margin:6.8px;
+            font-size:20px;
+            font-weight: 600;
+            background-color: rgb(200, 200, 200);
+        }
+        #display{
+            height:80px;
+            width:90%;
+            border:2px solid black;
+            margin:10px auto;
+            font-size:30px;
+            text-align:right;
+            padding:10px;
+            box-sizing: border-box;
+            overflow:hidden;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type='text' id="display">
+        <button id="add" class="button" onclick="ans= ans+'+'; d.value=ans; ">+</button>
+        <button id="subtract" class="button" onclick="ans= ans+'-'; d.value=ans; ">-</button>
+        <button id="multiply" class="button" onclick="ans= ans+'*'; d.value=ans; ">*</button>
+        <button id="divide" class="button" onclick="ans= ans+'/'; d.value=ans; ">/</button>
+        <button id="clear" class="button" onclick="ans=''; d.value=ans;">C</button>
+        <button id="num0" class="button" onclick="ans=ans+'0'; d.value=ans;">0</button>
+        <button id="num1" class="button" onclick="ans=ans+'1'; d.value=ans;">1</button>
+        <button id="num2" class="button" onclick="ans=ans+'2'; d.value=ans;">2</button>
+        <button id="num3" class="button" onclick="ans=ans+'3'; d.value=ans;">3</button>
+        <button id="num4" class="button" onclick="ans=ans+'4'; d.value=ans;">4</button>
+        <button id="num5" class="button" onclick="ans=ans+'5'; d.value=ans;">5</button>
+        <button id="num6" class="button" onclick="ans=ans+'6'; d.value=ans;">6</button>
+        <button id="num7" class="button" onclick="ans=ans+'7'; d.value=ans;">7</button>
+        <button id="num8" class="button" onclick="ans=ans+'8'; d.value=ans;">8</button>
+        <button id="num9" class="button" onclick="ans=ans+'9'; d.value=ans;">9</button>
+        <button id="equals" class="button" onclick="d.value=eval(ans); ans=eval(ans);">=</button>
+        <button id="decimal" class="button" onclick="ans=ans+'.'; d.value=ans;">.</button>
+        
+    </div>
+    <script>
+        let ans="";
+        const d=document.querySelector("#display");
+    </script>
+</body>
+</html>

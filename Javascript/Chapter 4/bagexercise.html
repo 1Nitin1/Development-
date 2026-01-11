@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        #button1 {
+            background-color: rgb(179, 230, 173);
+            width:150px;
+            border: 2px solid rgb(117, 210, 117);
+            font-weight:550;
+            font-size: 15px;
+        }
+        #button2 {
+            
+            width:200px;
+            border: 2px solid black;
+            font-weight:550;
+            font-size: 15px;
+        }
+        #button3 {
+            background-color: rgb(179, 230, 173);
+            width:220px;
+            border: 2px solid rgb(117, 210, 117);
+            font-weight:550;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button id="button1" class="button" onclick="items++">Add to Bag</button>
+    <button id="button2" class="button" onclick="items--; document.querySelector('#itemCount').innerText='Items in Bag: '+items;">Wishlist</button>
+    <button id="button3" class="button" onclick="items+=2">Add 1+1 Sale Item</button>
+    <p id="itemCount"></p>
+    <script>
+        let items=0;
+        document.querySelector("#itemCount").innerText="Items in Bag: "+items;
+        document.querySelector("#button1").addEventListener("click", function() {
+            document.querySelector("#itemCount").innerText="Items in Bag: "+items;
+        });
+        document.querySelector("#button3").addEventListener("click", function() {
+            document.querySelector("#itemCount").innerText="Items in Bag: "+items;
+        });
+    </script>
+</body>
+</html>
