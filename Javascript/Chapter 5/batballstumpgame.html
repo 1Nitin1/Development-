@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bat" onclick="userChoice='bat';">Bat</button>
+    <button id="ball" onclick="userChoice='ball';">Ball</button>
+    <button id="stump" onclick="userChoice='stump';">Stump</button>
+    <p id="result">Make your choice!</p>
+    <script>
+        let userChoice="";
+        const arr=['bat','ball','stump'];
+        let computerChoice='';
+        document.querySelector('#bat').addEventListener('click',function(){
+            computerChoice=arr[Math.floor(Math.random()*3)];
+            if(userChoice===computerChoice){
+                document.querySelector('#result').innerHTML="It's a tie! Both chose "+userChoice;
+            }
+            else if((userChoice==='bat' && computerChoice==='ball')){
+                document.querySelector('#result').innerHTML="You win! You chose "+userChoice+" and computer chose "+computerChoice;
+            }
+            else{
+                document.querySelector('#result').innerHTML="Computer wins! You chose "+userChoice+" and computer chose "+computerChoice;
+            }
+        });
+        document.querySelector('#ball').addEventListener('click',function(){
+            computerChoice=arr[Math.floor(Math.random()*3)];
+            if(userChoice===computerChoice){
+                document.querySelector('#result').innerHTML="It's a tie! Both chose "+userChoice;
+            }
+            else if((userChoice==='ball' && computerChoice==='stump')){
+                document.querySelector('#result').innerHTML="You win! You chose "+userChoice+" and computer chose "+computerChoice;
+            }
+            else{
+                document.querySelector('#result').innerHTML="Computer wins! You chose "+userChoice+" and computer chose "+computerChoice;
+            }
+        });
+        document.querySelector('#stump').addEventListener('click',function(){
+            computerChoice=arr[Math.floor(Math.random()*3)];
+            if(userChoice===computerChoice){
+                document.querySelector('#result').innerHTML="It's a tie! Both chose "+userChoice;
+            }
+            else if((userChoice==='stump' && computerChoice==='bat')){
+                document.querySelector('#result').innerHTML="You win! You chose "+userChoice+" and computer chose "+computerChoice;
+            }
+            else{
+                document.querySelector('#result').innerHTML="Computer wins! You chose "+userChoice+" and computer chose "+computerChoice;
+            }
+        });
+    </script>
+</body>
+</html>
