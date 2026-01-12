@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" value="0">
+    <input type="number" id="num2" value="0">
+    <button id="check" onclick="check();">Check</button>
+    <script>
+        let a;
+        let b;
+        function getNums(){
+            a=document.querySelector('#num1').value;
+            b=document.querySelector('#num2').value;
+        }
+        function check(){
+            getNums();
+            if(a>b){
+                alert('a is greater');
+            }else if(a==b){
+                alert('both equal');
+            }else{
+                alert('b is greater');
+            }
+        }
+    </script>
+</body>
+</html>

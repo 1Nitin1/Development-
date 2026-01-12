@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="#num">Enter the number :</label>
+    <input type="number" id="num" value="0" required>
+    <button id="button" onclick="check()">Check</button>
+    <script>
+        let num;
+        function getNum(){
+            num=document.querySelector('#num').value;
+        }
+        function check(){
+            getNum();
+            alert(num%2==0?'Even':'Odd');
+        }
+    </script>
+</body>
+</html>

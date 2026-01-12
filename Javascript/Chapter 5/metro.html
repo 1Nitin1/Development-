@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #status{
+            height: 100px;
+            width:200px;
+            border:2px solid black;
+            text-align: center;
+            line-height: 95px;
+            position:relative;
+            top:10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h3>Book Your Ticket :</h3>
+        <label for="#age">Enter you age :</label>
+        <input type="number" id="age" min="1" max="100" placeholder="0" required><br>
+        <h5>ENTER YOUR GENDER :</h5>
+        <label for="#female" onclick="gender='female';">Female :</label>
+        <input type="radio" name="gender" id="female" value="female" required><br>
+        <label for="#male" onclick="gender='male';">Male :</label>
+        <input type="radio" name="gender" id="male" value="male" required><br><br>
+        <button id="book">Book</button><br>
+        <div id="status">No Ticket Booked</div>
+    </form>
+    <script>
+        let age=0;
+        let gender='';
+        document.querySelector("#book").addEventListener('click',function(){
+            event.preventDefault();
+            age=Number(document.querySelector('#age').value);
+            gender=document.querySelector("input[name='gender']:checked").value;
+            if(age<5){
+                document.querySelector('#status').innerHTML='You get 100% off';
+            }else if(age<=8 || gender=='female'){
+                document.querySelector('#status').innerHTML='You get 50% off';
+            }else if(age>65){
+                document.querySelector('#status').innerHTML='You get 30% off';
+            }else{
+                document.querySelector('#status').innerHTML='You pay full';
+            }
+        });
+
+    </script>
+</body>
+</html>

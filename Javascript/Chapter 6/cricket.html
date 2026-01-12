@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bat" onclick="result('bat');">Bat</button>
+    <button id="ball" onclick="result('ball');">Ball</button>
+    <button id="stump" onclick="result('stump');">Stump</button>
+    
+    <p id="result">Make your choice!</p>
+    <script>
+        let userChoice="";
+        
+        let computerChoice='';
+        function computer(){
+            const arr=['bat','ball','stump'];
+            computerChoice=arr[Math.floor(Math.random()*3)];
+        }
+        function result(name){
+            userChoice=name;
+            computer();
+            if(userChoice===computerChoice){
+                document.querySelector('#result').innerHTML="It's a tie! Both chose "+userChoice;
+            }
+            else if((userChoice==='bat' && computerChoice==='ball')||(userChoice==='ball' && computerChoice==='stump')||(userChoice==='stump' && computerChoice==='bat')){
+                document.querySelector('#result').innerHTML="You win! You chose "+userChoice+" and computer chose "+computerChoice;
+            }
+            else{
+                document.querySelector('#result').innerHTML="Computer wins! You chose "+userChoice+" and computer chose "+computerChoice;
+            }
+        };
+        
+    </script>
+</body>
+</html>

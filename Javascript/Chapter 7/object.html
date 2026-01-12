@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product={
+            company:'Mango',
+            price: 860,
+            item_name:'T-shirt',
+            nitin:{
+                age:19,
+                course:'btech'
+            },
+            getPriceAndAge: function(){
+                return `${this.price} and ${this.nitin.age}`;
+            }
+        };
+        console.log(product.company='banana');
+        delete product.company;
+        console.log(product.getPriceAndAge());
+    </script>
+</body>
+</html>

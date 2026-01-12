@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bat" onclick="result('bat'); getSummary();">Bat</button>
+    <button id="ball" onclick="result('ball'); getSummary();">Ball</button>
+    <button id="stump" onclick="result('stump'); getSummary();">Stump</button>
+    <p id="result">Make your choice!</p>
+    <p id="summary"></p>
+    <script>
+        let userChoice="";
+        let summary={
+            win:0,
+            draw:0,
+            lose:0
+        };
+        document.querySelector('#summary').innerHTML=`WINS : ${summary.win},\nDRAWS : ${summary.draw},\nLOSES : ${summary.lose}`;
+        function getSummary(){
+            document.querySelector('#summary').innerHTML=`WINS : ${summary.win},\nDRAWS : ${summary.draw},\nLOSES : ${summary.lose}`;
+        }
+        let computerChoice='';
+        function computer(){
+            const arr=['bat','ball','stump'];
+            computerChoice=arr[Math.floor(Math.random()*3)];
+        }
+        function result(name){
+            userChoice=name;
+            computer();
+            if(userChoice===computerChoice){
+                document.querySelector('#result').innerHTML="It's a tie! Both chose "+userChoice;
+                summary.draw++;
+            }
+            else if((userChoice==='bat' && computerChoice==='ball')||(userChoice==='ball' && computerChoice==='stump')||(userChoice==='stump' && computerChoice==='bat')){
+                document.querySelector('#result').innerHTML="You win! You chose "+userChoice+" and computer chose "+computerChoice;
+                summary.win++;
+            }
+            else{
+                document.querySelector('#result').innerHTML="Computer wins! You chose "+userChoice+" and computer chose "+computerChoice;
+                summary.lose++;
+            }
+        };
+        
+    </script>
+</body>
+</html>
