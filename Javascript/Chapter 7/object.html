@@ -7,18 +7,25 @@
 </head>
 <body>
     <script>
+        //property shorthand
+        let price=860;
         let product={
             company:'Mango',
-            price: 860,
+            price,
             item_name:'T-shirt',
             nitin:{
                 age:19,
                 course:'btech'
             },
+            //method shorthand getPrice(){}
             getPriceAndAge: function(){
                 return `${this.price} and ${this.nitin.age}`;
             }
         };
+        //destructuring
+        let {company}=product;
+        console.log(company)
+
         console.log(product.company='banana');
         delete product.company;
         console.log(product.getPriceAndAge());

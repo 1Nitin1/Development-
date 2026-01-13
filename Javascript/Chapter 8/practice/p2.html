@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #but{
+            height:100px;
+            width:100px;
+            font-size:40px;
+            background-color: green;
+            
+        }
+    </style>
+</head>
+<body>
+    <button id="but">0</button>
+    <button id="reset" onclick="reset()">RESET</button>
+    <script>
+        let count=0;
+        let color='green';
+        let d = document.querySelector('#but');
+        function reset(){
+            count=0;
+            localStorage.setItem('button',0);
+            d.innerText=0;
+            d.style.backgroundColor='green';
+        
+        }
+        count=localStorage.getItem('button');
+        d.innerText=count;
+        if(count%2==1){
+                d.style.backgroundColor='red';
+        }else{
+            d.style.backgroundColor='green';
+        }
+        d.addEventListener('click',function(){
+            count++
+            if(count%2==1){
+                d.style.backgroundColor='red';
+            }else{
+                d.style.backgroundColor='green';
+            }
+            localStorage.setItem('button',count);
+            d.innerText=count;
+        });
+    </script>
+</body>
+</html>
