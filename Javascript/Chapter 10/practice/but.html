@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+            height:30px;
+            width:100px;
+
+        }
+    </style>
+</head>
+<body>
+    <button id="button">Button</button>
+    <script>
+        let b = document.querySelector('#button');
+        let eve = event=>{
+            b.style='height:60px; width:200px;';
+        }
+        let id=()=>setTimeout(eve,4000);
+        b.addEventListener('click',id);
+    </script>
+</body>
+</html>
