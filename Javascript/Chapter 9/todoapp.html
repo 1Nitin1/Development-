@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #todo{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            border:4px solid black;
+            width:500px;
+            border-radius: 50px;
+            height:500px;
+            overflow:scroll;
+            
+
+        }
+        h2{
+            text-align: center;
+            height:40px;
+            width:100%;
+            line-height: 35px;
+            border:3px solid black;
+            position: relative;
+            
+            bottom:3px;
+
+        }
+        #items{
+            width:100%;
+            display:flex;
+            flex-direction: column;
+        }
+        #inputs{
+            display: flex;
+            justify-content: space-around;
+            height:30px;
+            width:100%;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="todo">
+        <h2>Todo App</h2>
+        <div id="items">
+            <div id="inputs">
+                <input type="text" id="text" placeholder="Enter work here" required>
+                <input type="date" id="date" required>
+                <button id="Add">Add</button>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        let work='';
+        let date='';
+        let box={};
+        
+        let i=0;
+        let d = document.querySelector('#items');
+        box=JSON.parse(localStorage.getItem('i'));
+        for(let k in box){
+            k=Number(k);
+            i=Math.max(i,k+1);
+            let ele=document.createElement('div');
+            ele.classList.add(`${k}`);
+            ele.style='display:flex; justify-content:space-around ';
+            ele.innerHTML=`<p>${box[k][0]}</p>\n<p>${box[k][1]}</p>\n<button onclick='deleteele(${k})'>Delete</button>`;
+                
+            d.appendChild(ele);
+        }
+        
+        function deleteele(ind){
+            
+            d.removeChild(document.getElementsByClassName(ind)[0]);
+            delete box[ind];
+            localStorage.setItem('i',JSON.stringify(box));
+        }
+        document.querySelector('#Add').addEventListener('click',function(){
+            work=document.querySelector('#text').value??'';
+            date=document.querySelector('#date').value??'';
+            if(work=='' || date==''){
+                alert('ENTER VALID INPUT');
+            }else{
+                box[i]=[work,date];
+                localStorage.setItem('i',JSON.stringify(box));
+                let ele=document.createElement('div');
+                ele.classList.add(`${i}`);
+                ele.style='display:flex; justify-content:space-around ';
+                ele.innerHTML=`<p>${work}</p>\n<p>${date}</p>\n<button onclick='deleteele(${i++})'>Delete</button>`;
+                
+                d.appendChild(ele);
+                
+            }
+        });
+    </script>
+</body>
+</html>
