@@ -1,4 +1,4 @@
 function Heading(){
-   return <h1 class='head'>Bharat Clock</h1>
+   return <h1 class='head' style={{backgroundColor:'lightblue'}}>Bharat Clock</h1>
 }
 export default Heading;
